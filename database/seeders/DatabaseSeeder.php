@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(TypeSeeder::class);
         // \App\Models\User::factory(10)->create();
         \App\Models\Project::factory(10)->create();
 
@@ -19,6 +20,6 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call(TypeSeeder::class);
+        $this->call(TechnologySeeder::class);
     }
 }
